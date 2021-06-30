@@ -181,7 +181,7 @@ $(function(){
     var user = $(this).serialize();
     $.ajax({
       type: 'POST',
-      url: 'db/registration.php',
+      url: 'db/contactadmin.php',
       data: user,
       dataType:'json',
       success:function(response){
