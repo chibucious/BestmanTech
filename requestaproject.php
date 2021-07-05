@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Upwork</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/customstyle.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <title>Upwork</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/customstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -44,10 +47,12 @@
 <h2 class="text-center">REQUEST FOR A PROJECT/SEMINAR</h2>
 
 
-<!-- <form action="https://formspree.io/f/xayabdbz"
-  method="POST" class="bg-light p-5 contact-form">
+
+
+
+<form id="requestaproject" class="bg-light p-5 contact-form">
 <div class="form-group">
-<input type="text" class="form-control" name="Name" placeholder="Enter Your Name">
+<input type="text" class="form-control" name="Name" placeholder="Enter Your Name" required>
 </div>
 
 <div class="form-group">
@@ -55,10 +60,15 @@
 </div>
 
 <div class="form-group">
-<input type="text" class="form-control" name="_replyto" placeholder="Enter Your Functional Email" required>
+<input type="text" class="form-control" name="Email" placeholder="Enter Your Functional Email" required>
 </div>
 
 <div class="form-group">
+<input type="tel" class="form-control" name="Phone number" maxlength="11" minlength="11" placeholder="Enter Your Functional Phone Number" required>
+</div>
+
+<div class="form-group">
+<!-- <input type="text" class="form-control" name="subject" placeholder="Subject"> -->
 <select class="form-control" name="Project type" required>
   <option selected="" value="">Select project type</option>
   <option value="Software">Software</option>
@@ -78,51 +88,7 @@
 
 
 <div class="form-group">
-<textarea id="" cols="30" rows="7" name="Message(Optional)" class="form-control" placeholder="Message (Optional)"></textarea>
-</div>
-<div class="form-group">
-<input type="submit" value="Send Request" class="btn btn-primary py-3 px-5 nlbtn">
-<input type="submit" value="Loading" disabled="" class="btn btn-primary py-3 px-5 lbtn">
-</div>
-</form> -->
-
-
-
-<form id="requestaproject" class="bg-light p-5 contact-form">
-<div class="form-group">
-<input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
-</div>
-
-<div class="form-group">
-<input type="text" class="form-control" name="department" placeholder="Enter Your Department" required>
-</div>
-
-<div class="form-group">
-<input type="text" class="form-control" name="email" placeholder="Enter Your Functional Email" required>
-</div>
-
-<div class="form-group">
-<!-- <input type="text" class="form-control" name="subject" placeholder="Subject"> -->
-<select class="form-control" name="projecttype" required>
-  <option selected="" value="">Select project type</option>
-  <option value="Software">Software</option>
-  <option value="Hardware">Hardware</option>
-  <option value="Notsure_Suggest_for_me">Not Sure? Suggest for me</option>
-</select>
-</div>
-
-
-<div class="form-group">
-  <label>What's your budget like? Insert a reasonable amount in ₦</label>
-  <div class="form-control" style="display: flex;align-items: center;">
-    <span style="display: inline-block;width:3%;">₦</span>
-    <input type="number" class="form-control" name="budget" placeholder="eg. 70,000" style="display: inline-block;width:97%;padding-left:2px;height: 50px !important;border:none;outline: none;" required>
-  </div>
-</div>
-
-
-<div class="form-group">
-<textarea id="" cols="30" rows="7" name="message" class="form-control" placeholder="Message (Optional)"></textarea>
+<textarea id="" cols="30" rows="7" name="Message" class="form-control" placeholder="Message (Optional)"></textarea>
 </div>
 <div class="form-group">
 <input type="submit" value="Send Request" class="btn btn-primary py-3 px-5 nlbtn">
@@ -160,6 +126,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </footer>
 
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js+popper.min.js+bootstrap.min.js.pagespeed.jc.Yneyw-r-Yw.js"></script><script>eval(mod_pagespeed_uQdDT8kHk_);</script>
 <script>eval(mod_pagespeed_TD$bnxCuBm);</script>
@@ -172,46 +140,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script>eval(mod_pagespeed_0$thljJrSn);</script>
 <script>eval(mod_pagespeed_KuFRaBEPpj);</script>
 <script>eval(mod_pagespeed_hIDZMkNLxN);</script>
+
 <script src="js/jquery.timepicker.min.js+scrollax.min.js+google-map.js+main.js.pagespeed.jc.V0iMrDQorW.js"></script><script>eval(mod_pagespeed_IPRIcJdfpy);</script>
 <script>eval(mod_pagespeed_hjVyyBjBJ$);</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script>eval(mod_pagespeed_$djaVC4VZ$);</script>
 <script>eval(mod_pagespeed_MZumP$LeIH);</script>
 
-<script>
-$(function(){
 
 
-  $('#requestaproject').submit(function(e){
-    e.preventDefault();
-    $(".lbtn").show(); 
-    $(".nlbtn").hide(); 
-    // alert(54);
-    var user = $(this).serialize();
-    $.ajax({
-      type: 'POST',
-      url: 'db/requestaproject.php',
-      data: user,
-      dataType:'json',
-      success:function(response){
-        $(".lbtn").hide(); 
-        $(".nlbtn").show(); 
-        // var response = JSON.parse(data);
-        if(response.error === false){
-          alert(response.message);
-          $('input').val('');
-        }else{
-          alert(response.message);
-        }
-      
-      }
 
 
-    });
-  });
 
-})
-</script>
+<script src="js/requestaproject.js"></script>
 
 
 
